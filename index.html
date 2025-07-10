@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to-do list</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+
+h1{
+    /* text-align: center; */
+    font-weight: bolder;
+    font-size: 50px;
+    background-color: #2980b9;
+    color: #fff;
+    margin: 0;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 400;
+
+    
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+#container{
+    width: 360px;
+    background-color: #f7f7f7;
+    margin: 0 auto;
+    border: 2px solid gray;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1)
+}
+.completed{
+    text-decoration: line-through;
+    color: grey;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    background: #a8c0ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+li {
+    background-color: white;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+}
+li:nth-child(2n) {
+    background: #f7f7f7;
+}
+input{
+    width: 100%;
+    padding: 13px 13px 13px 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+
+    
+}
+input:focus{
+    background: white;
+    border: 2px solid #2980b9;
+    outline: none;
+}
+.fa-solid{
+    position: relative;left: 180px;
+}
+span{
+    background: #e74c3c;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    color: white;
+    width: 0;
+    display: inline-block;
+    opacity: 0;
+    transition: 1.2s linear;
+    
+
+}
+li:hover span {
+    width: 40px;
+    opacity: 1;
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+    <h1>ToDo List  <i class="fa-solid fa-plus"></i> </h1>
+    <input type="text" placeholder="Enter a ToDo">
+    <ul>
+        <li><span><i class="fa fa-trash"></i></span>Wake up</li>
+        <li><span><i class="fa fa-trash"></i></span>Eat</li>
+        <li><span><i class="fa fa-trash"></i></span>Sleep</li>
+    </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <!-- <script>
+// alert("connected")
+
+// $("li").click(function () {
+//     $(this).css("color","red" )
+//     $(this).css("text-decoration", "line-through");
+// });
+
+
+$("ul").on("click", "li", function () {
+    $(this).toggleClass("completed")
+});
+
+
+$("ul").on("click", "span",function () {
+    $(this).parent().fadeOut(5000, function() {
+        $(this).remove()
+    });
+});
+
+$("input").keypress(function(event) {
+    if (event.which === 13) {
+        let todoText = $(this).val();
+        $(this).val("")
+        
+    $("ul").append("<li> <span> <i class='fa fa-trash'></i> </span>" + todoText + "</li");
+}
+});
+
+
+
+//     if ($(this).css("color")==="rgb(128, 128, 128)") {
+//         $(this).css("color", "black")
+//         $(this).css("text-decoration", "none")
+
+//     }else {
+//     $(this).css("color", "grey")
+//     $(this).css("text-decoration", "line-through")
+
+//     }
+// });
+// // $("li").click (function () {
+// //  $(this).css({
+// //     color: "grey",
+// //     textDecoration: "line-through"
+    
+// //  });
+// });
+
+// if (this.color === "grey") {
+
+// console.log($(this).css("color"));
+
+
+    </script> -->
+    <script src="script.js"></script>
+</body>
+</html>
